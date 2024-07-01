@@ -584,6 +584,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"2jbVS":[function(require,module,exports) {
+// COOKIE SCORE RENDERER
 document.addEventListener("DOMContentLoaded", ()=>{
     function getCookie(name) {
         const cookieString = document.cookie;

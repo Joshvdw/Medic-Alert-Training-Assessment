@@ -1,3 +1,4 @@
+// COOKIE SCORE RENDERER
 document.addEventListener("DOMContentLoaded", () => {
   function getCookie(name) {
     const cookieString = document.cookie;

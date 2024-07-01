@@ -4,3 +4,4 @@
 # misc
 .parcel-cache/**
 .parcel-cache/data.mdb
+.DS_Store

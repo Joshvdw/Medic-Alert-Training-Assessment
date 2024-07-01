@@ -5,8 +5,11 @@ if (
 ) {
   import("./score.js");
 }
+if (window.location.href.includes("training-assessment-introduction")) {
+  import("./testPicker.js");
+}
 
-if (window.location.pathname == "/training-assessment-test") {
+if (window.location.pathname.includes("/training-assessment-test")) {
   document.addEventListener("DOMContentLoaded", () => {
     let hasUserPassed;
     const answers = document.querySelectorAll(".answers");
@@ -66,9 +69,9 @@ if (window.location.pathname == "/training-assessment-test") {
       )}; path=/`;
       document.cookie = `hasUserPassed=${hasUserPassed}; path=/`;
 
-      console.log(`Score: ${scoreCounter}`);
-      console.log(`Percentage of correct answers: ${percentageText}`);
-      console.log(`User has ${hasUserPassed ? "passed" : "failed"}`);
+      // log results
+      console.log(`Percentage score: ${percentageText}`);
+      console.log(`User has ${hasUserPassed ? "passed" : "failed"} the test`);
 
       // remove answers from DOM before submission to clean up form collection data
       answers.forEach((answer) => {
